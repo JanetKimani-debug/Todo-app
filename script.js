@@ -58,6 +58,7 @@ function addTaskToDOM(task) {
 
 // Clear all tasks
 clearAllBtn.addEventListener("click", function () {
+    li.remove();
     tasks = [];
     localStorage.setItem("tasks", JSON.stringify(tasks));
     taskList.innerHTML = "";
@@ -69,6 +70,7 @@ function updateCount() {
     const pending = tasks.filter(t => !t.done).length;
     taskCount.textContent = `You have ${pending} pending tasks`;
 }
+
 
 
 
