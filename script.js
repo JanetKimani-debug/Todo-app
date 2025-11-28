@@ -56,11 +56,6 @@ function addTaskToDOM(task) {
     taskList.appendChild(li);
 }
 
- // Category tag
-    const categoryTag = document.createElement("span");
-    categoryTag.textContent = ` [${task.category}]`;
-    categoryTag.classList.add("category-tag");
-
 // Clear all tasks
 clearAllBtn.addEventListener("click", function () {
     tasks = [];
@@ -74,6 +69,8 @@ function updateCount() {
     const pending = tasks.filter(t => !t.done).length;
     taskCount.textContent = `You have ${pending} pending tasks`;
 }
+
+
 
 
 
