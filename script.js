@@ -44,6 +44,8 @@ function addTaskToDOM(task) {
     deleteBtn.textContent = "🗑";
     deleteBtn.style.fontSize = "16px";
     deleteBtn.addEventListener("click", function () {
+        if (confirm("Are you sure you want to delete?"))
+            
         li.remove();
         tasks = tasks.filter(t => t !== task);
         localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -78,6 +80,7 @@ function updateCount() {
     const pending = tasks.filter(t => !t.done).length;
     taskCount.textContent = `You have ${pending} pending tasks`;
 }
+
 
 
 
