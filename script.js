@@ -54,22 +54,25 @@ function addTaskToDOM(task) {
     li.appendChild(span);
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
-}
-
 // Clear all tasks
 clearAllBtn.addEventListener("click", function () {
-    li.remove();
-    tasks = tasks.filter(t => t !== task);
+    // Clear tasks array
+    tasks = [];
+    // Clear localStorage
     localStorage.setItem("tasks", JSON.stringify(tasks));
+    // Clear the UI
     taskList.innerHTML = "";
+    // Update count
     updateCount();
 });
+
 
 // Update pending tasks count
 function updateCount() {
     const pending = tasks.filter(t => !t.done).length;
     taskCount.textContent = `You have ${pending} pending tasks`;
 }
+
 
 
 
