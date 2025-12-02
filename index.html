@@ -7,13 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <div class="todo-container">
         <h1>Todo App</h1>
 
         <div class="input-section">
             <input type="text" id="taskInput" placeholder="Add your new todo">
+
+            <select id="categorySelect">
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+
             <button id="addTaskBtn">+</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-row">
+            <label>Filter:</label>
+            <select id="filterSelect">
+                <option value="All">All</option>
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
         </div>
 
         <ul id="taskList"></ul>
@@ -27,6 +49,8 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
