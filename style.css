@@ -9,11 +9,11 @@ body {
 }
 
 .todo-container {
-    background: white;
+    background: #fff;
     padding: 30px;
-    border-radius: 12px;
-    width: 350px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 h1 {
@@ -21,93 +21,92 @@ h1 {
     margin-bottom: 20px;
 }
 
-.input-section {
+.input-section, .filter-row {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-input[type="text"] {
-    flex: 1;
+input, select {
+    width: 100%;
     padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 #addTaskBtn {
     padding: 10px 15px;
+    background: purple;
     border: none;
-    background-color: #8e44ad;
     color: white;
-    border-radius: 6px;
-    font-size: 20px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-#addTaskBtn:hover {
-    background-color: #732d91;
-}
-
-/* Task List */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
+#taskList li {
     display: flex;
     align-items: center;
+    background: #f7f7f7;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
     justify-content: space-between;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f2f2f2;
-    border-radius: 6px;
 }
 
-/* Checkbox */
-ul li input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    cursor: pointer;
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Delete button */
-ul li button {
-    background-color: #e74c3c;
+.category-label {
+    background: #3498db;
     color: white;
-    border: none;
-    padding: 6px 10px;
+    padding: 3px 8px;
+    font-size: 12px;
     border-radius: 6px;
+}
+
+.urgent-label {
+    background: #e74c3c;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+button.delete-btn, button.edit-btn {
+    border: none;
+    background: transparent;
     cursor: pointer;
+    padding: 5px;
 }
 
-ul li button:hover {
-    background-color: #c0392b;
+.delete-btn {
+    color: red;
 }
 
-/* Footer bottom section */
+.edit-btn {
+    color: green;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
     align-items: center;
+    margin-top: 15px;
 }
 
 #clearAllBtn {
-    background-color: #3498db;
+    padding: 8px 15px;
+    background: #3498db;
     border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
 }
 
-#clearAllBtn:hover {
-    background-color: #2980b9;
-}
+
 
 
 
